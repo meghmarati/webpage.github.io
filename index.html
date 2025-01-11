@@ -5,99 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        input [type="text"]
-        {
-          color: red;
-          
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .banner{
+            width: 100%;
+            height: 100vh;
+           
+            background-color: rgb(8, 21, 21);
+        }
+        .navbar{
+            width: 85%;
+            margin: auto;
+            padding: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo{
+            width: 120px;
+            cursor: pointer;
+            color: white;
+            font-size: 30px;
+        }
+        .navbar ul li{
+            display: inline-block;
+            margin:  20px;
+            position: relative;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .navbar ul li::after{
+            content: '';
+            height: 3px;
+            width:0%;
+            background: #009688;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+        .navbar ul li:hover::after{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: #fff;
+        }
+        .content h1{
+            font-size: 70px;
+            margin-top: 80px;
+        }
+        .content p{
+            margin: 20px auto;
+            line-height: 25px;
+        }
+        button{
+            width: 200px;
+            text-align: center;
+            border-radius: 25px;
+            padding: 15px;
+            margin: 20px 10px;
+            font-weight: bold;
+            border: 2px solid #009688;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        span{
+            background:#009688;
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
 
         }
-        ::-webkit-input-placeholder{
-            color: green;
+        button:hover span{
+            width: 100%;
         }
-        input[type="email"], input[type="password"]
-        {
-         color:pink;
+        button:hover{
+          border: none;
         }
+
     </style>
+    
 </head>
 <body>
-    <center>
-        <form>
-            <h1>user data form</h1>
-            <fieldset style="width: 50%;">
-                <legend>personal Information</legend>
-                First name::
-                <input type="text" id="fname" name="fname">
-                <br><br>
-                Last name::
-                <input type="text" placeholder="enter last name">
-                <br><br>
-                <label>Email::</label>
-                <input type="email">
-                <br><br>
-                password::
-                <input type="password">
-                <br><br>
-                select gender::
-                <input type="radio"  name="gender" value="male"> male
-                <input type="radio"  name="gender" value="female">female
-                <input type="radio"  name="gender" value="others">others
-                <br><br>
-                skill::
-                <input type="checkbox"  value="java">java
-                <input type="checkbox" value="c++">c++
-                <input type="checkbox"  value="c">c
-                <br><br>
-                qualification::
-                <select>
-                    <option>BCA</option>
-                    <option>BA</option>
-                    <option>bba</option>
-                </select>
-                <br><br>
-                  enter address::
-                  <textarea></textarea>
-                  <br><br>
-                  date of birth::
-                  <input type="date">
-                  <br><br>
-                 datetime-local
-                  <input type="datetime-local">
-                  <br><br>
-                 color::
-                  <input type="color">
-                  <br><br>
-                  month::
-                  <input type="month">
-                  <br><br>
-                  weeek::
-                  <input type="week">
-                  <br><br>
-                  time::
-                  <input type="time">
-                  <br><br>
-                  number::
-                  <input type="number">
-                  <br><br>
-                  number::
-                  <input type="number" min="3" max="5">
-                  <br><br>
-                 range::
-                  <input type="range">
-                  <br><br>
-                  file::
-                  <input type="file">
-                  <br><br>
-                  tel::
-                  <input type="tel" pattern=[0-9]{3}-[0-9]{3}-[0-9]{4}>
-                  <br><br>
-                  <input type="checkbox"> i agree to the term of user
-                  <br><br>
+    <div class="banner">
+        <div class="navbar">
+            <h2 class="logo">LOGO</h2> 
+           <ul>
+            <li><a href="a">HOME</a></li>
+            <li><a href="a">VIDEOS</a></li>
+            <li><a href="a">PORTFOLEO</a></li>
+            <li><a href="a">BLOG</a></li>
+            <li><a href="a">CONTACT US</a></li>
+           </ul>
+ </div>
+ <div class="content">
+    <h1>SIMPLE WEBPAGES</h1>
+    <P>this is simple and beautifull webpages, it is a front-end webpage usign html and css</P>
+    <div>
+        <button type="button"><span></span> START HERE</button>
+        <button type="button"><span></span>SUBSCRIBE US</button>
 
-                  <input type="submit">
-                  <input type="reset">
-            </fieldset>
-        </form>
-    </center>
+    </div>
+ </div>
+    </div>
+    
 </body>
 </html>
