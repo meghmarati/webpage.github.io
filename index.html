@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input [type="text"]
+        {
+          color: red;
+          
+
+        }
+        ::-webkit-input-placeholder{
+            color: green;
+        }
+        input[type="email"], input[type="password"]
+        {
+         color:pink;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <form>
+            <h1>user data form</h1>
+            <fieldset style="width: 50%;">
+                <legend>personal Information</legend>
+                First name::
+                <input type="text" id="fname" name="fname">
+                <br><br>
+                Last name::
+                <input type="text" placeholder="enter last name">
+                <br><br>
+                <label>Email::</label>
+                <input type="email">
+                <br><br>
+                password::
+                <input type="password">
+                <br><br>
+                select gender::
+                <input type="radio"  name="gender" value="male"> male
+                <input type="radio"  name="gender" value="female">female
+                <input type="radio"  name="gender" value="others">others
+                <br><br>
+                skill::
+                <input type="checkbox"  value="java">java
+                <input type="checkbox" value="c++">c++
+                <input type="checkbox"  value="c">c
+                <br><br>
+                qualification::
+                <select>
+                    <option>BCA</option>
+                    <option>BA</option>
+                    <option>bba</option>
+                </select>
+                <br><br>
+                  enter address::
+                  <textarea></textarea>
+                  <br><br>
+                  date of birth::
+                  <input type="date">
+                  <br><br>
+                 datetime-local
+                  <input type="datetime-local">
+                  <br><br>
+                 color::
+                  <input type="color">
+                  <br><br>
+                  month::
+                  <input type="month">
+                  <br><br>
+                  weeek::
+                  <input type="week">
+                  <br><br>
+                  time::
+                  <input type="time">
+                  <br><br>
+                  number::
+                  <input type="number">
+                  <br><br>
+                  number::
+                  <input type="number" min="3" max="5">
+                  <br><br>
+                 range::
+                  <input type="range">
+                  <br><br>
+                  file::
+                  <input type="file">
+                  <br><br>
+                  tel::
+                  <input type="tel" pattern=[0-9]{3}-[0-9]{3}-[0-9]{4}>
+                  <br><br>
+                  <input type="checkbox"> i agree to the term of user
+                  <br><br>
+
+                  <input type="submit">
+                  <input type="reset">
+            </fieldset>
+        </form>
+    </center>
+</body>
+</html>
